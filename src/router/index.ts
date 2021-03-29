@@ -1,9 +1,9 @@
 import { Router } from 'express';
 
-import todo from './todo';
+import cashiers from './cashiers';
 
 let rootRouter = Router();
 
-rootRouter.use('/todo', todo);
+rootRouter.use('/cashiers', cashiers);
 
 export default rootRouter;

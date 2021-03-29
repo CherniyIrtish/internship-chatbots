@@ -11,7 +11,6 @@ export const loggerMiddleware = async (req: IGetUserAuthInfoRequest, res: Respon
     format: winston.format.json(),
     transports: [new winston.transports.Console()],
   });
-  console.log(req);
   req.state.logger = logger;
 
   return next();
