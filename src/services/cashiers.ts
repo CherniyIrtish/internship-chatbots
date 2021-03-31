@@ -5,7 +5,7 @@ export class CashiersService {
     return await Cashiers.findAll();
   }
 
-  async create() {
-    return await Cashiers.findAll();
+  async create(cashier: any) {
+    return await Cashiers.create({ title: cashier });
   }
 }

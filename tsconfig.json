@@ -11,9 +11,10 @@
     "baseUrl": "./src",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "preserveConstEnums": true
   },
   "lib": ["es2015"],
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "src/interfaces"],
   "exclude": ["node_modules"]
 }

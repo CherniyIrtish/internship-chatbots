@@ -3,7 +3,7 @@ const path = require('path');
 const Sequelize = require('sequelize');
 const basename = path.basename(module.filename);
 const env = process.env.NODE_ENV || 'development';
-const config = require(`${__dirname}/../config/config.json`)[env];
+const config = require(`${__dirname}/../config/db-config.json`)[env];
 const db: { [key: string]: any } = {};
 
 let sequelize: any;
@@ -16,7 +16,7 @@ fs.readdirSync(__dirname)
     const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
     db[model.name] = model;
   });
-  
+
 Object.keys(db).forEach((modelName) => {
   if (db[modelName].associate) {
     db[modelName].associate(db);
