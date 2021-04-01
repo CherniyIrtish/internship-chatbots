@@ -30,10 +30,6 @@ module.exports = (sequelize: Sequelize, DataTypes: any) => {
       type: DataTypes.ARRAY(DataTypes.STRING),
       allowNull: false,
     },
-    worksInShifts: {
-      type: DataTypes.ARRAY(DataTypes.STRING),
-      allowNull: false,
-    },
   });
   return Cashiers;
 };

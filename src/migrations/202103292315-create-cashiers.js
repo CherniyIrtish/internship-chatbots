@@ -7,18 +7,36 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      title: {
+      age: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+      },
+      sex: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      createdAt: {
+      yearsOfExperience: {
+        type: Sequelize.INTEGER,
         allowNull: false,
-        type: Sequelize.DATE,
       },
-      updatedAt: {
+      firstName: {
+        type: Sequelize.STRING,
         allowNull: false,
-        type: Sequelize.DATE,
       },
+      lastName: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      isWorking: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+      },
+      workedBefore: {
+        type: Sequelize.ARRAY(Sequelize.STRING),
+        allowNull: false,
+      },
+      createdAt: Sequelize.DATE,
+      updatedAt: Sequelize.DATE,
     }),
   down: (queryInterface) => queryInterface.dropTable('Cashiers'),
 };
