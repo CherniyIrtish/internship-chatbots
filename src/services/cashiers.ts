@@ -25,10 +25,6 @@ export class CashiersService {
     });
   }
 
-  async foo(value: any) {
-    console.log('---> ', value);
-  }
-
   async getTargetCashiers2() {
     return await Schedules.findAll({
       where: {
