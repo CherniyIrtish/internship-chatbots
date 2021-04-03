@@ -1,6 +1,6 @@
 const Cashiers = require('../models').Cashiers;
 const Schedules = require('../models').Schedules;
-const sequelize = require('sequelize');
+const Shops = require('../models').Shops;
 const { Op } = require('sequelize');
 
 export class CashiersService {
@@ -26,8 +26,12 @@ export class CashiersService {
   }
 
   async getTargetCashiers2() {
+    const address = 'Shevchenko 100';
+    const shop = await Shops.findOne({ where: { address } });
+
     return await Schedules.findAll({
       where: {
+        shopId: shop.id,
         shiftType: '23:00-07:00',
         weekDay: 'monday',
       },

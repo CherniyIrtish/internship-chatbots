@@ -1,7 +1,7 @@
 import { Sequelize } from 'sequelize/types';
 
 module.exports = (sequelize: Sequelize, DataTypes: any) => {
-  const Shop = sequelize.define('Shop', {
+  const Shops = sequelize.define('Shops', {
     address: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -11,5 +11,5 @@ module.exports = (sequelize: Sequelize, DataTypes: any) => {
       allowNull: false,
     },
   });
-  return Shop;
+  return Shops;
 };

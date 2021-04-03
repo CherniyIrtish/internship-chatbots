@@ -47,6 +47,15 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
+        cashierId: 1,
+        shopId: 1,
+        cashRegisterNumber: 3,
+        shiftType: '23:00-07:00',
+        weekDay: 'monday',
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
         cashierId: 3,
         shopId: 2,
         cashRegisterNumber: 4,
