@@ -6,13 +6,13 @@ export const enum SHIFTS {
 }
 
 export const enum WEEK_DAYS {
-  MONDAY = '12:00-20:00',
-  THESDAY = '12:00-20:00',
-  WEDNESDAY = '12:00-20:00',
-  THURSDAY = '12:00-20:00',
-  FRIDAY = '12:00-20:00',
-  SATURDAY = '12:00-20:00',
-  SUNDAY = '12:00-20:00',
+  MONDAY = 'monday',
+  TUESDAY = 'tuesday',
+  WEDNESDAY = 'wednesday',
+  THURSDAY = 'thursday',
+  FRIDAY = 'friday',
+  SATURDAY = 'saturday',
+  SUNDAY = 'sunday',
 }
 
 export const enum CITY_SHOPS {

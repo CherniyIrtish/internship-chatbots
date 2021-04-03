@@ -15,7 +15,18 @@ const create = async (req: Request, res: Response) => {
   const createdCashier: ICashier = await cashiersService.create(req.body.title);
   res.status(200).send(createdCashier);
 };
+const getTargetCashiers1 = async (req: Request, res: Response) => {
+  const targetCashiers1: ICashier[] = await cashiersService.getTargetCashiers1();
+  res.status(200).send(targetCashiers1);
+};
 
+const getTargetCashiers2 = async (req: Request, res: Response) => {
+  const targetCashiers2: ICashier[] = await cashiersService.getTargetCashiers2();
+  res.status(200).send(targetCashiers2);
+};
+
+router.get('/getTargetCashiers1', getTargetCashiers1);
+router.get('/getTargetCashiers2', getTargetCashiers2);
 router.get('/', getAll);
 router.post('/', create);
 
